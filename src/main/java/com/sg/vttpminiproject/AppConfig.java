@@ -1,4 +1,4 @@
-package com.sg.vttpminiproject;
+/* package com.sg.vttpminiproject;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
@@ -51,3 +51,5 @@ public class AppConfig {
     }
 
 }
+
+*/
