@@ -16,7 +16,7 @@ import com.sg.vttpminiproject.models.Twitter;
 @Repository
 public class TwitterRepository {
     @Autowired
-
+	// always rmb to set REDIS_PASSWORD on cli
     @Qualifier("redislab")
 	private RedisTemplate<String, String> redisTemplate;
 

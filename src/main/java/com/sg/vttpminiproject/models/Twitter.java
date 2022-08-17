@@ -8,23 +8,9 @@ import jakarta.json.JsonReader;
 
 public class Twitter {
 
-    private String maxResults;
-    private int userId;
     private String id;
     private String text;
 
-    public String getMaxResults() {
-        return maxResults;
-    }
-    public void setMaxResults(String maxResults) {
-        this.maxResults = maxResults;
-    }
-    public int getUserId() {
-        return userId;
-    }
-    public void setUserId(int userId) {
-        this.userId = userId;
-    }
     public String getId() {
         return id;
     }
