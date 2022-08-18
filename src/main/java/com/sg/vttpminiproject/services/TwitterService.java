@@ -44,6 +44,7 @@ public class TwitterService {
 
 			String url = UriComponentsBuilder
 					.fromUriString(URL)
+					.queryParam("tweet.fields", "created_at")
 					.encode()
 					.toUriString();
 
@@ -60,8 +61,6 @@ public class TwitterService {
 			resp = template.exchange(req, String.class);
 
 			payload = resp.getBody();
-
-			
 
 			System.out.println(">>>> payload: " + payload); // the payload if everything goes well lmao
 

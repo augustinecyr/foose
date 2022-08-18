@@ -11,12 +11,17 @@
 </head>
 
 <body>
-    <h2 style="text-align: center;">Latest from Fabrizio</h2>
+    <marquee>
+      <h3>Latest Tweets from @FabrizioRomano</h3>
+    </marquee>
     <div class="container p-5 my-5 bg-dark text-white" data-th-each="t: ${tweets}">
         <table>
             <tr>
                 <td>
-                    <p><code data-th-text="${t.id}"></code></p>
+
+                    <p>Timestamp: <code data-th-text="${t.created_at}"></code></p>
+
+                    <p>Tweet ID: <code data-th-text="${t.id}"></code></p>
 
                     <p><code data-th-text="${t.text}"></code></p>
 

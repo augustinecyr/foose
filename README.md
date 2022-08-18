@@ -9,3 +9,5 @@
 6. Exploring Twitter's API.
 7. Creating a Service to reach the API.
 8. Displaying desired outcome on a HTML using ThymeLeaf.
+9. Testing if redis is working and storing payload.
+

@@ -20,6 +20,8 @@ public class TwitterRepository {
     @Qualifier("redislab")
 	private RedisTemplate<String, String> redisTemplate;
 
+	
+
 	public void save(Twitter tweet) {
 		redisTemplate.opsForValue().set(tweet.getId(), tweet.toJson().toString());
 		redisTemplate.expire(tweet.getId(), Duration.ofMinutes(5));
