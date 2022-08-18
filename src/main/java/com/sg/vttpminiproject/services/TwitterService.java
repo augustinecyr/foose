@@ -5,6 +5,7 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.RequestEntity;
 import org.springframework.http.ResponseEntity;
@@ -13,6 +14,7 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import com.sg.vttpminiproject.models.Twitter;
+import com.sg.vttpminiproject.repositories.TwitterRepository;
 
 import jakarta.json.Json;
 import jakarta.json.JsonObject;
@@ -29,6 +31,9 @@ public class TwitterService {
 
 	@Value("${BEARER_TOKEN}")
 	private String bearerToken;
+
+	@Autowired
+    private TwitterRepository twitterRepo;
 
 	public List<Twitter> getTweets() {
 
@@ -56,6 +61,8 @@ public class TwitterService {
 
 			payload = resp.getBody();
 
+			
+
 			System.out.println(">>>> payload: " + payload); // the payload if everything goes well lmao
 
 		} catch (Exception ex) {
@@ -72,6 +79,9 @@ public class TwitterService {
 			for (JsonValue v : j.getJsonArray("data"))
 				tweets.add(Twitter.create((JsonObject) v));
 		}
+
+		twitterRepo.save(tweets); // enter the tweet id to view it on redis cli
+		
 
 		return tweets;
 	}

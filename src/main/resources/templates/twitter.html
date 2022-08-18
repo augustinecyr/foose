@@ -11,17 +11,14 @@
 </head>
 
 <body>
-    <h1>Latest from Fabrizio <span data-th-text="${tweets.size()}"></span></h1>
-    <h1>Latest from Fabrizio <span data-th-text="${tweets}"></span></h1>
- 
-
-    <div data-th-each="t: ${tweets}">
+    <h2 style="text-align: center;">Latest from Fabrizio</h2>
+    <div class="container p-5 my-5 bg-dark text-white" data-th-each="t: ${tweets}">
         <table>
             <tr>
                 <td>
-                    <p>Id: <code data-th-text="${t.id}"></code></p>
+                    <p><code data-th-text="${t.id}"></code></p>
 
-                    <p>Text: <code data-th-text="${t.text}"></code></p>
+                    <p><code data-th-text="${t.text}"></code></p>
 
                 </td>
             </tr>
