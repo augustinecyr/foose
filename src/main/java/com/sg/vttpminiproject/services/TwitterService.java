@@ -33,7 +33,7 @@ public class TwitterService {
 	private String bearerToken;
 
 	@Autowired
-    private TwitterRepository twitterRepo;
+	private TwitterRepository twitterRepo;
 
 	public List<Twitter> getTweets() {
 
@@ -44,7 +44,7 @@ public class TwitterService {
 
 			String url = UriComponentsBuilder
 					.fromUriString(URL)
-					.queryParam("tweet.fields", "created_at")
+					.queryParam("tweet.fields", "created_at,entities")
 					.encode()
 					.toUriString();
 
@@ -54,7 +54,7 @@ public class TwitterService {
 					.build();
 
 			System.out.println("url: " + url); // prints out the URL that is built
-			 
+
 			RestTemplate template = new RestTemplate();
 
 			ResponseEntity<String> resp;
@@ -69,7 +69,6 @@ public class TwitterService {
 			return Collections.emptyList();
 		}
 
-
 		List<Twitter> tweets = new LinkedList<>();
 
 		try (StringReader strReader = new StringReader(payload)) {
@@ -80,7 +79,6 @@ public class TwitterService {
 		}
 
 		twitterRepo.save(tweets); // enter the tweet id to view it on redis cli
-		
 
 		return tweets;
 	}

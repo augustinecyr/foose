@@ -1,6 +1,6 @@
 ### Mini Project
 
-### Week 1 
+### Week 1 15-19 August 2022
 1. Setting up project files and folders
 2. Add all standard dependencies and required properties e.g Redis & Heroku on VS.
 3. Set remote connections to GitHub and Heroku.
@@ -10,4 +10,5 @@
 7. Creating a Service to reach the API.
 8. Displaying desired outcome on a HTML using ThymeLeaf.
 9. Testing if redis is working and storing payload.
+10. Manage to successfully display & navigate to twitter.html *Image display still in progress*
 

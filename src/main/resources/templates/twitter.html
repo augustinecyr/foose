@@ -12,8 +12,11 @@
 
 <body>
     <marquee>
-      <h3>Latest Tweets from @FabrizioRomano</h3>
+        <h3>Latest Tweets from @FabrizioRomano</h3>
     </marquee>
+    <a href="index.html">
+        <p style="text-align: center;">Home</p>
+    </a>
     <div class="container p-5 my-5 bg-dark text-white" data-th-each="t: ${tweets}">
         <table>
             <tr>
@@ -23,7 +26,13 @@
 
                     <p>Tweet ID: <code data-th-text="${t.id}"></code></p>
 
+                    <!-- <p>Entities:<code data-th-text="${t.entities}"></code></p> -->
+                    <!-- Shows all the items inside "entities"-->
                     <p><code data-th-text="${t.text}"></code></p>
+                    <!-- Stuck at displaying images -->
+
+
+
 
                 </td>
             </tr>
