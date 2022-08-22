@@ -3,6 +3,7 @@ package com.sg.vttpminiproject.models;
 import java.io.StringReader;
 
 import jakarta.json.Json;
+import jakarta.json.JsonArray;
 import jakarta.json.JsonObject;
 import jakarta.json.JsonReader;
 
@@ -12,6 +13,15 @@ public class Twitter {
 	private String text;
 	private String created_at;
 	private JsonObject entities;
+	private JsonArray urls;
+
+	public JsonArray getUrls() {
+		return urls;
+	}
+
+	public void setUrls(JsonArray urls) {
+		this.urls = urls;
+	}
 
 	public String getId() {
 		return id;
