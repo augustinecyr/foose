@@ -17,6 +17,7 @@ import com.sg.vttpminiproject.models.Twitter;
 import com.sg.vttpminiproject.repositories.TwitterRepository;
 
 import jakarta.json.Json;
+import jakarta.json.JsonArray;
 import jakarta.json.JsonObject;
 import jakarta.json.JsonReader;
 import jakarta.json.JsonValue;
@@ -53,7 +54,9 @@ public class TwitterService {
 					.header("Authorization", "Bearer %s".formatted(bearerToken)) // rmb to set BEARER_TOKEN on cli
 					.build();
 
-			System.out.println("url: " + url); // prints out the URL that is built
+			System.out.println(">>> [url]: " + url); // prints out the URL that is built
+
+			System.out.println("-----------------------------------------------------------");
 
 			RestTemplate template = new RestTemplate();
 
@@ -62,7 +65,8 @@ public class TwitterService {
 
 			payload = resp.getBody();
 
-			System.out.println(">>>> payload: " + payload); // the payload if everything goes well lmao
+			System.out.println(">>> [payload]: " + payload); // the payload if everything goes well lmao
+			System.out.println("-----------------------------------------------------------");
 
 		} catch (Exception ex) {
 			System.err.printf("Error: %s\n", ex.getMessage()); // helps with problem solving SO MUCH
@@ -74,8 +78,28 @@ public class TwitterService {
 		try (StringReader strReader = new StringReader(payload)) {
 			JsonReader r = Json.createReader(strReader);
 			JsonObject j = r.readObject();
-			for (JsonValue v : j.getJsonArray("data"))
+
+			// testing image url.....
+			JsonArray data = j.getJsonArray("data");
+			JsonObject firstObj = data.getJsonObject(0); // this will test the first tweet
+			JsonObject ent = firstObj.getJsonObject("entities");
+			JsonArray urls = ent.getJsonArray("urls");
+			
+			System.out.println("Total number of tweets: " + data.size());
+			System.out.println("-----------------------------------------------------------");
+			System.out.println("testing to check what [entities] contains: " + ent); // object
+			System.out.println("-----------------------------------------------------------");
+			System.out.println("testing to check if there are [urls]: " + urls); // array
+
+
+
+			for (JsonValue v : j.getJsonArray("data")) {
+
 				tweets.add(Twitter.create((JsonObject) v));
+
+			}
+
+
 		}
 
 		twitterRepo.save(tweets); // enter the tweet id to view it on redis cli

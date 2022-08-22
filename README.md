@@ -10,5 +10,7 @@
 7. Creating a Service to reach the API.
 8. Displaying desired outcome on a HTML using ThymeLeaf.
 9. Testing if redis is working and storing payload.
-10. Manage to successfully display & navigate to twitter.html *Image display still in progress*
+10. Manage to successfully display & navigate to twitter.html
 
+### Week 2 22-26 August 2022
+1. 
