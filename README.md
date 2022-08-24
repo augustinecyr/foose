@@ -10,7 +10,9 @@
 7. Creating a Service to reach the API.
 8. Displaying desired outcome on a HTML using ThymeLeaf.
 9. Testing if redis is working and storing payload.
-10. Manage to successfully display & navigate to twitter.html
+10. Manage to successfully display & navigate to twitter.html.
 
 ### Week 2 22-26 August 2022
-1. 
+1. Touch-up and finalising twitter.html.
+2. Added buttons to link different social media platforms e.g. Twitter,Youtube with the usage of Bootstrap 5 Icons.
+3.
