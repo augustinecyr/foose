@@ -7,6 +7,7 @@ import jakarta.json.JsonArray;
 import jakarta.json.JsonObject;
 import jakarta.json.JsonReader;
 
+
 public class Twitter {
 
 	private String id;
@@ -17,11 +18,12 @@ public class Twitter {
 	private String display_url;
 
 	public String getDisplay_url() {
+
 		return display_url;
 	}
 
-	public void setDisplay_url(String string) {
-		this.display_url = string;
+	public void setDisplay_url(String display_url) {
+		this.display_url = display_url;
 	}
 
 	public JsonArray getUrls() {

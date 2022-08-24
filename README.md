@@ -13,6 +13,8 @@
 10. Manage to successfully display & navigate to twitter.html.
 
 ### Week 2 22-26 August 2022
-1. Touch-up and finalising twitter.html.
+1. UI design of twitter.html.
 2. Added buttons to link different social media platforms e.g. Twitter,Youtube with the usage of Bootstrap 5 Icons.
-3.
+3. Utilised navbar to make browsing easier to understand.
+4. Look for APIs for League Tables & Statistics.
+5. 

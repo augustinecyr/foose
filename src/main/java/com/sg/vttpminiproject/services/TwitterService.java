@@ -85,13 +85,15 @@ public class TwitterService {
 			JsonObject ent = firstObj.getJsonObject("entities");
 			JsonArray urls = ent.getJsonArray("urls");
 			
+			
+			
 			System.out.println("Total number of tweets: " + data.size());
 			System.out.println("-----------------------------------------------------------");
 			System.out.println("testing to check what [entities] contains: " + ent); // object
 			System.out.println("-----------------------------------------------------------");
 			System.out.println("testing to check if there are [urls]: " + urls); // array
-
-
+			System.out.println("-----------------------------------------------------------");
+			
 
 			for (JsonValue v : j.getJsonArray("data")) {
 
