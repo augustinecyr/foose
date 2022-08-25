@@ -60,7 +60,6 @@
     <div class="container-lg my-5 bg-dark text-white rounded-3 h-100 w-100" data-th-each="t: ${tweets}">
 
         <table>
-
             <tr>
                 <td>
                     <br>
@@ -72,7 +71,6 @@
                         <br>
                         @FabrizioRomano
                     </p>
-
                     <p>Timestamp: <code class="text-white" data-th-text="${t.created_at}"></code></p>
                     <p>Tweet ID: <code class="text-white" data-th-text="${t.id}"></code></p>
                     <!-- Shows all the arrays inside "entities"-->
@@ -85,5 +83,13 @@
     </div>
     <form>
 </body>
+<br><br>
+<!-- Footer -->
+<footer class="bg-dark text-center text-white fixed-bottom">
+    <div class="text-center p-3 fixed-bottom bg-dark text-white">
+        © 2022:
+        <a class="text-white bg-dark" href="https://vttpminiproject.herokuapp.com/">Foose.com</a>
+    </div>
+</footer>
 
 </html>

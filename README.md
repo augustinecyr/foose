@@ -17,4 +17,6 @@
 2. Added buttons to link different social media platforms e.g. Twitter,Youtube with the usage of Bootstrap 5 Icons.
 3. Utilised navbar to make browsing easier to understand.
 4. Look for APIs for League Tables & Statistics.
-5. 
+5. Added footer for all pages & created error.html.
+6. Discovered and studied transfermarkt.com API.
+7. Start building for TransferMarkt components.
