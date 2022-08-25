@@ -45,7 +45,7 @@ public class TwitterService {
 
 			String url = UriComponentsBuilder
 					.fromUriString(URL)
-					.queryParam("tweet.fields", "created_at,entities")
+					.queryParam("tweet.fields", "created_at,entities,public_metrics")
 					.encode()
 					.toUriString();
 
@@ -82,12 +82,15 @@ public class TwitterService {
 			// testing image url.....
 			JsonArray data = j.getJsonArray("data");
 			JsonObject firstObj = data.getJsonObject(0); // this will test the first tweet
+			JsonObject metrics = firstObj.getJsonObject("public_metrics");
 			JsonObject ent = firstObj.getJsonObject("entities");
 			JsonArray urls = ent.getJsonArray("urls");
 			
 			
 			
-			System.out.println("Total number of tweets: " + data.size());
+			System.out.println("Total number of tweets: " + data.size()); // object count
+			System.out.println("-----------------------------------------------------------");
+			System.out.println("Metrics: " + metrics); // object
 			System.out.println("-----------------------------------------------------------");
 			System.out.println("testing to check what [entities] contains: " + ent); // object
 			System.out.println("-----------------------------------------------------------");
