@@ -7,7 +7,6 @@ import jakarta.json.JsonArray;
 import jakarta.json.JsonObject;
 import jakarta.json.JsonReader;
 
-
 public class Twitter {
 
 	private String id;
@@ -72,6 +71,7 @@ public class Twitter {
 		tweet.setText(json.getString("text"));
 		tweet.setCreated_at(json.getString("created_at"));
 		tweet.setEntities(json.getJsonObject("entities"));
+
 		// tweet.setDisplay_url(json.getString("display_url"));
 		// tweet.setUrls(json.getJsonArray("urls"));
 		return tweet;
@@ -90,6 +90,7 @@ public class Twitter {
 				.add("text", this.text)
 				.add("created_at", this.created_at)
 				.add("entities", this.entities)
+
 				// .add("urls", this.urls)
 				// .add("display_url", this.display_url)
 				.build();

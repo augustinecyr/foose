@@ -14,9 +14,7 @@
 
 <body>
 
-
     <nav class="navbar bg-dark text-white">
-        <h4>Latest Tweets from @FabrizioRomano</h4>
         <div class="container-fluid">
             <a class="navbar-brand text-white" href="index.html">
                 <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor"
@@ -78,7 +76,7 @@
                     <p>Timestamp: <code class="text-white" data-th-text="${t.created_at}"></code></p>
                     <p>Tweet ID: <code class="text-white" data-th-text="${t.id}"></code></p>
                     <!-- Shows all the arrays inside "entities"-->
-                    <!-- <p>Entities: <code class="text-white" data-th-text="${t.entities}"></code></p> -->
+                   <!--  <p>Entities: <code class="text-white" data-th-text="${t.entities}"></code></p> -->
                     <p><code class="text-white h-100 w-100" data-th-text="${t.text}"></code></p>
                     <!--  <p><img data-th-src="${t.display_url}"></p> -->
                 </td>

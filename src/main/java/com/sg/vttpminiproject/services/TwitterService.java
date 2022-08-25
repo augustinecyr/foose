@@ -90,7 +90,7 @@ public class TwitterService {
 			
 			System.out.println("Total number of tweets: " + data.size()); // object count
 			System.out.println("-----------------------------------------------------------");
-			System.out.println("Metrics: " + metrics); // object
+			System.out.println("Tweet Metrics: " + metrics); // object
 			System.out.println("-----------------------------------------------------------");
 			System.out.println("testing to check what [entities] contains: " + ent); // object
 			System.out.println("-----------------------------------------------------------");
