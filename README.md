@@ -21,3 +21,6 @@
 6. Discovered and studied transfermarkt.com API.
 7. Start building for TransferMarkt components.
 8. Created about.html & contact.html.
+
+### Week 3 29 August to 2 Sept 2022
+1. 
