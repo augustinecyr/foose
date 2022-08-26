@@ -20,3 +20,4 @@
 5. Added footer for all pages & created error.html.
 6. Discovered and studied transfermarkt.com API.
 7. Start building for TransferMarkt components.
+8. Created about.html & contact.html.
