@@ -30,8 +30,7 @@ public class TransferMarktController {
         sess.setAttribute("tables", tables);
         model.addAttribute("tables", tables);
         model.addAttribute("id", id);
-        model.addAttribute("seasonID", seasonID);
-
+        model.addAttribute("seasonID", seasonID);      
         return "leaguetable";
 
     }

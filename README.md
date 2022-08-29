@@ -23,4 +23,8 @@
 8. Created about.html & contact.html.
 
 ### Week 3 29 August to 2 Sept 2022
-1. 
+1. Reading JSON payload from the TransferMarkt API endpoint.
+2. Query parameters working.
+3. Select dropdown menu values working for selection of leagues.
+4. Club badges appearing beside team names in leaguetable.html.
+5. Changed to <p class="display-5"> for header of the app.

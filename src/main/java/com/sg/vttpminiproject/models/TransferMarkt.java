@@ -16,7 +16,7 @@ public class TransferMarkt {
     private String clubName;
     private Number matches;
     private Number wins;
-    private Number draws;
+    private Number draw;
     private Number losses;
     private Number goals;
     private Number goalsConceded;
@@ -47,12 +47,12 @@ public class TransferMarkt {
         this.wins = wins;
     }
 
-    public Number getDraws() {
-        return draws;
+    public Number getDraw() {
+        return draw;
     }
 
-    public void setDraws(Number draws) {
-        this.draws = draws;
+    public void setDraw(Number draw) {
+        this.draw = draw;
     }
 
     public Number getLosses() {
@@ -134,7 +134,7 @@ public class TransferMarkt {
         table.setClubName(json.getString("clubName"));
         table.setMatches(json.getInt("matches"));
         table.setWins(json.getInt("wins"));
-        table.setDraws(json.getInt("draw"));
+        table.setDraw(json.getInt("draw"));
         table.setLosses(json.getInt("losses"));
         table.setGoals(json.getInt("goals"));
         table.setGoalsConceded(json.getInt("goalsConceded"));
@@ -157,7 +157,7 @@ public class TransferMarkt {
                 .add("clubName", this.clubName)
                 .add("matches", this.matches.toString())
                 .add("wins", this.wins.toString())
-                .add("draw", this.draws.toString())
+                .add("draw", this.draw.toString())
                 .add("losses", this.losses.toString())
                 .add("goals", this.goals.toString())
                 .add("goalsConceded", this.goalsConceded.toString())
