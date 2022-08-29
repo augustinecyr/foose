@@ -28,3 +28,4 @@
 3. Select dropdown menu values working for selection of leagues.
 4. Club badges appearing beside team names in leaguetable.html.
 5. Changed to <p class="display-5"> for header of the app.
+6. Completed all styling and display of information for League Table.
