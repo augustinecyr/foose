@@ -13,6 +13,7 @@ import org.springframework.stereotype.Repository;
 
 import com.sg.vttpminiproject.models.TransferMarkt;
 
+
 @Repository
 public class TransferMarktRepository {
 
@@ -22,12 +23,12 @@ public class TransferMarktRepository {
 	private RedisTemplate<String, String> redisTemplate;
 
     public void save(TransferMarkt table) {
-		redisTemplate.opsForValue().set(table.getId(), table.toJson().toString());
-		redisTemplate.expire(table.getId(), Duration.ofMinutes(5));
+		redisTemplate.opsForValue().set(table.getClubName(), table.toJson().toString());
+		redisTemplate.expire(table.getClubName(), Duration.ofMinutes(5));
 	}
 
 	public void save(List<TransferMarkt> table) {
-		Map<String, String> map = new HashMap<>();
+		Map<String, String> map = new HashMap<String,String>();
 		for (TransferMarkt t: table)
 			map.put(t.getId(), t.toJson().toString());
 		redisTemplate.opsForValue().multiSet(map);

@@ -5,7 +5,8 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
-import org.springframework.beans.factory.annotation.Autowired;
+// import org.springframework.beans.factory.annotation.Autowired;
+// import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.RequestEntity;
 import org.springframework.http.ResponseEntity;
@@ -14,10 +15,12 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import com.sg.vttpminiproject.models.TransferMarkt;
-import com.sg.vttpminiproject.repositories.TransferMarktRepository;
+// import com.sg.vttpminiproject.repositories.TransferMarktRepository;
+// import com.sg.vttpminiproject.repositories.TransferMarktRepository;
 
 import jakarta.json.Json;
 import jakarta.json.JsonArray;
+import jakarta.json.JsonNumber;
 import jakarta.json.JsonObject;
 import jakarta.json.JsonReader;
 import jakarta.json.JsonString;
@@ -31,8 +34,8 @@ public class TransferMarktService {
 	@Value("${X-RapidAPI-Key}")
 	private String rapidAPI;
 
-	@Autowired
-	private TransferMarktRepository trfRepo;
+   // @Autowired
+	// private TransferMarktRepository trfRepo;
 
 	public List<TransferMarkt> getTable(String id, String seasonID) {
 
@@ -72,7 +75,7 @@ public class TransferMarktService {
 			return Collections.emptyList();
 		}
 
-		List<TransferMarkt> table = new LinkedList<>();
+		List<TransferMarkt> tables = new LinkedList<>();
 
 		try (StringReader strReader = new StringReader(payload)) {
 			JsonReader r = Json.createReader(strReader);
@@ -81,12 +84,14 @@ public class TransferMarktService {
             JsonArray leagueTable = j.getJsonArray("table");
             JsonObject first = leagueTable.getJsonObject(0); // first team of the table
             JsonString firstName = first.getJsonString("clubName"); 
+            JsonNumber points = first.getJsonNumber("points");
             JsonObject last = leagueTable.getJsonObject(19);
             JsonString lastName = last.getJsonString("clubName");
 
 			System.out.println("Total number of teams: " + leagueTable.size());
             System.out.println("-----------------------------------------------------------");
             System.out.println("Top of the table: " + firstName);
+            System.out.println("Points: " + points);
             System.out.println("-----------------------------------------------------------");
             System.out.println("Bottom of the table: " + lastName);
             System.out.println("-----------------------------------------------------------");
@@ -95,15 +100,15 @@ public class TransferMarktService {
 
 			for (JsonValue v : j.getJsonArray("table")) {
 
-				table.add(TransferMarkt.create((JsonObject) v));
+				tables.add(TransferMarkt.create((JsonObject) v));
 
 			}
 
 
 		}
 
-		trfRepo.save(table); // enter the tweet id to view it on redis cli
+	//	trfRepo.save(tables); // enter the tweet id to view it on redis cli
 
-		return table;
+		return tables;
 	}
 }
