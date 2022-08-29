@@ -88,11 +88,11 @@ public class TransferMarktService {
             System.out.println("-----------------------------------------------------------");
             System.out.println("Top of the table: " + firstName);
             System.out.println("-----------------------------------------------------------");
-            System.out.println("Last of the table: " + lastName);
+            System.out.println("Bottom of the table: " + lastName);
             System.out.println("-----------------------------------------------------------");
 
 
-            
+
 			for (JsonValue v : j.getJsonArray("table")) {
 
 				table.add(TransferMarkt.create((JsonObject) v));
