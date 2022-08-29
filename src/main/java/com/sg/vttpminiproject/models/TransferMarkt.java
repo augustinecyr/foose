@@ -133,8 +133,13 @@ public class TransferMarkt {
         table.setClubImage(json.getString("clubImage"));
         table.setClubName(json.getString("clubName"));
         table.setMatches(json.getInt("matches"));
-        
-
+        table.setWins(json.getInt("wins"));
+        table.setDraws(json.getInt("draw"));
+        table.setLosses(json.getInt("losses"));
+        table.setGoals(json.getInt("goals"));
+        table.setGoalsConceded(json.getInt("goalsConceded"));
+        table.setGoalDifference(json.getInt("goalDifference"));
+        table.setPoints(json.getInt("points"));
         return table;
     }
 
@@ -151,8 +156,13 @@ public class TransferMarkt {
                 .add("clubImage", this.clubImage)
                 .add("clubName", this.clubName)
                 .add("matches", this.matches.toString())
-
-                
+                .add("wins", this.wins.toString())
+                .add("draw", this.draws.toString())
+                .add("losses", this.losses.toString())
+                .add("goals", this.goals.toString())
+                .add("goalsConceded", this.goalsConceded.toString())
+                .add("goalDifference", this.goalDifference.toString())
+                .add("points", this.points.toString())
                 .build();
     }
 
