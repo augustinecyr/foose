@@ -17,8 +17,10 @@ import com.sg.vttpminiproject.models.TransferMarkt;
 import com.sg.vttpminiproject.repositories.TransferMarktRepository;
 
 import jakarta.json.Json;
+import jakarta.json.JsonArray;
 import jakarta.json.JsonObject;
 import jakarta.json.JsonReader;
+import jakarta.json.JsonString;
 import jakarta.json.JsonValue;
 
 @Service
@@ -76,8 +78,21 @@ public class TransferMarktService {
 			JsonReader r = Json.createReader(strReader);
 			JsonObject j = r.readObject();
 
-			
+            JsonArray leagueTable = j.getJsonArray("table");
+            JsonObject first = leagueTable.getJsonObject(0); // first team of the table
+            JsonString firstName = first.getJsonString("clubName"); 
+            JsonObject last = leagueTable.getJsonObject(19);
+            JsonString lastName = last.getJsonString("clubName");
 
+			System.out.println("Total number of teams: " + leagueTable.size());
+            System.out.println("-----------------------------------------------------------");
+            System.out.println("Top of the table: " + firstName);
+            System.out.println("-----------------------------------------------------------");
+            System.out.println("Last of the table: " + lastName);
+            System.out.println("-----------------------------------------------------------");
+
+
+            
 			for (JsonValue v : j.getJsonArray("table")) {
 
 				table.add(TransferMarkt.create((JsonObject) v));
