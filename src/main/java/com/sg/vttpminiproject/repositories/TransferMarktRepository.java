@@ -22,15 +22,15 @@ public class TransferMarktRepository {
     @Qualifier("redislab")
 	private RedisTemplate<String, String> redisTemplate;
 
-    public void save(TransferMarkt table) {
-		redisTemplate.opsForValue().set(table.getClubName(), table.toJson().toString());
-		redisTemplate.expire(table.getClubName(), Duration.ofMinutes(5));
+    public void save(TransferMarkt tables) {
+		redisTemplate.opsForValue().set(tables.getClubName(), tables.toJson().toString());
+		redisTemplate.expire(tables.getClubName(), Duration.ofMinutes(5));
 	}
 
-	public void save(List<TransferMarkt> table) {
+	public void save(List<TransferMarkt> tables) {
 		Map<String, String> map = new HashMap<String,String>();
-		for (TransferMarkt t: table)
-			map.put(t.getId(), t.toJson().toString());
+		for (TransferMarkt t: tables)
+			map.put(t.getClubName(), t.toJson().toString());
 		redisTemplate.opsForValue().multiSet(map);
 
 		for (String id: map.keySet())

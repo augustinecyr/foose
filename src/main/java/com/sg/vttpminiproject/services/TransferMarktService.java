@@ -5,8 +5,7 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
 
-// import org.springframework.beans.factory.annotation.Autowired;
-// import org.springframework.beans.factory.annotation.Autowired;
+ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.RequestEntity;
 import org.springframework.http.ResponseEntity;
@@ -15,8 +14,8 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import com.sg.vttpminiproject.models.TransferMarkt;
-// import com.sg.vttpminiproject.repositories.TransferMarktRepository;
-// import com.sg.vttpminiproject.repositories.TransferMarktRepository;
+ import com.sg.vttpminiproject.repositories.TransferMarktRepository;
+
 
 import jakarta.json.Json;
 import jakarta.json.JsonArray;
@@ -34,8 +33,8 @@ public class TransferMarktService {
 	@Value("${X-RapidAPI-Key}")
 	private String rapidAPI;
 
-   // @Autowired
-	// private TransferMarktRepository trfRepo;
+    @Autowired
+	 private TransferMarktRepository trfRepo;
 
 	public List<TransferMarkt> getTable(String id, String seasonID) {
 
@@ -107,7 +106,7 @@ public class TransferMarktService {
 
 		}
 
-	//	trfRepo.save(tables); // enter the tweet id to view it on redis cli
+		trfRepo.save(tables);
 
 		return tables;
 	}
