@@ -1,6 +1,6 @@
 ### Mini Project
 
-### Week 1 15-19 August 2022
+### Week 1 / 15-19 August 2022
 1. Setting up project files and folders
 2. Add all standard dependencies and required properties e.g Redis & Heroku on VS.
 3. Set remote connections to GitHub and Heroku.
@@ -12,7 +12,7 @@
 9. Testing if redis is working and storing payload.
 10. Manage to successfully display & navigate to twitter.html.
 
-### Week 2 22-26 August 2022
+### Week 2 / 22-26 August 2022
 1. UI design of twitter.html.
 2. Added buttons to link different social media platforms e.g. Twitter,Youtube with the usage of Bootstrap 5 Icons.
 3. Utilised navbar to make browsing easier to understand.
@@ -22,7 +22,7 @@
 7. Start building for TransferMarkt components.
 8. Created about.html & contact.html.
 
-### Week 3 29 August to 2 Sept 2022
+### Week 3 / 29 August to 2 Sept 2022
 1. Reading JSON payload from the TransferMarkt API endpoint.
 2. Query parameters working.
 3. Select dropdown menu values working for selection of leagues.
@@ -32,3 +32,6 @@
 7. Discovered a display issue on mobile browser.
 8. Solved mobile view, trfRepo doesnt work on heroku due to H12 error.
 9. Commented out trfRepo, function works as it should on localhost.
+
+### Week 4 / 5 Sept to 9 Sept 2022
+1. Start planning for @RestController and POST method.
