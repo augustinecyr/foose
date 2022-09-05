@@ -36,3 +36,5 @@
 ### Week 4 / 5 Sept to 9 Sept 2022
 1. Start planning for @RestController and POST method.
 2. Changing Statistics to Highlights.
+3. Scorebat.com will be used to display latest highlights.
+4. Does @RestController work for API too?
