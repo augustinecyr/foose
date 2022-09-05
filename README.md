@@ -35,3 +35,4 @@
 
 ### Week 4 / 5 Sept to 9 Sept 2022
 1. Start planning for @RestController and POST method.
+2. Changing Statistics to Highlights.
