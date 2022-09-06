@@ -26,11 +26,9 @@
         </div>
     </nav>
     <br>
-    <div class="container-lg bg-dark" data-th-each="h: ${highlights}">
-       
-                    <iframe class="responsive-iframe h-100 w-100" th:src="${h.matchviewUrl}"></iframe>
-        
-
+    <div class="container-xl my-5 bg-dark text-white align-content-center text-center justify-content-center" data-th-each="h: ${highlights}">
+        <p class="lead"> <code class="text-white" th:text="${h.title}"></code> </p>
+        <p> <iframe th:src="${h.matchviewUrl}" class="w-50 h-100 border-1 border-primary" allowfullscreen></iframe> </p>
     </div>
 </body>
 

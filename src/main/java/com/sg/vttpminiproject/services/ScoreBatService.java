@@ -63,7 +63,7 @@ public class ScoreBatService {
         }
 
         List<ScoreBat> highlights = new LinkedList<>();
-
+        
         try (StringReader strRdr = new StringReader(payload)) {
             JsonReader r = Json.createReader(strRdr);
             JsonObject j = r.readObject();
@@ -72,7 +72,6 @@ public class ScoreBatService {
                 highlights.add(ScoreBat.create((JsonObject) v));
             }
 
-    
             return highlights;
         }
     }

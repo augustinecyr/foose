@@ -8,26 +8,11 @@ import jakarta.json.JsonReader;
 
 public class ScoreBat {
 
-    private String title;
     private String matchviewUrl;
     private String thumbnail;
-    private String embed;
+    private String title;
 
-    public String getEmbed() {
-        return embed;
-    }
 
-    public void setEmbed(String embed) {
-        this.embed = embed;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
 
     public String getMatchviewUrl() {
         return matchviewUrl;
@@ -47,9 +32,9 @@ public class ScoreBat {
 
     public static ScoreBat create(JsonObject json) {
         final ScoreBat highlight = new ScoreBat();
-        highlight.setTitle(json.getString("title"));
         highlight.setMatchviewUrl(json.getString("matchviewUrl"));
         highlight.setThumbnail(json.getString("thumbnail"));
+        highlight.setTitle(json.getString("title"));
         return highlight;
 
     }
@@ -64,9 +49,17 @@ public class ScoreBat {
 
     public JsonObject toJson() {
         return Json.createObjectBuilder()
-                .add("title", this.title)
                 .add("matchviewUrl", this.matchviewUrl)
                 .add("thumbnail", this.thumbnail)
+                .add("title", this.title)
                 .build();
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
     }
 }

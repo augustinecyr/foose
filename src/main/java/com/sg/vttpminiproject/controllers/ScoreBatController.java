@@ -11,6 +11,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+
 import com.sg.vttpminiproject.models.ScoreBat;
 import com.sg.vttpminiproject.services.ScoreBatService;
 
@@ -22,7 +23,7 @@ public class ScoreBatController {
     @Autowired
     private ScoreBatService scoreSvc;
 
-    @GetMapping(produces =  "video/mp4")
+    @GetMapping
     public String getHighlights(Model model, HttpSession sess){
 
         List<ScoreBat> highlights = scoreSvc.getHighlights();
