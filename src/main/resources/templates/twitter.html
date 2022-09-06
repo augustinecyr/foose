@@ -59,7 +59,6 @@
 
 
     <div class="container-lg my-5 bg-dark text-white rounded-3 h-100 w-100" data-th-each="t: ${tweets}">
-
         <table>
             <tr>
                 <td>
@@ -74,10 +73,7 @@
                     </p>
                     <p>Timestamp: <code class="text-white" data-th-text="${t.created_at}"></code></p>
                     <p>Tweet ID: <code class="text-white" data-th-text="${t.id}"></code></p>
-                    <!-- Shows all the arrays inside "entities"-->
-                    <!--  <p>Entities: <code class="text-white" data-th-text="${t.entities}"></code></p> -->
                     <p class="lead"><code class="text-white h-100 w-100" data-th-text="${t.text}"></code></p>
-                    <!--  <p><img data-th-src="${t.display_url}"></p> -->
                 </td>
             </tr>
         </table>
