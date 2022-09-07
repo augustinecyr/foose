@@ -26,9 +26,14 @@
         </div>
     </nav>
     <br>
-    <div class="container-xl my-5 bg-dark text-white align-content-center text-center justify-content-center" data-th-each="h: ${highlights}">
-        <p class="lead"> <code class="text-white" th:text="${h.title}"></code> </p>
-        <p> <iframe th:src="${h.matchviewUrl}" class="w-50 h-100 border-1 border-primary" allowfullscreen></iframe> </p>
+    <div class="container-xl bg-dark text-white rounded-2">
+    <p class="lead bg-dark text-white text-center rounded-2">
+        Tip: Ctrl + F and enter your team for quick search
+      </p>
+    </div>
+    <div class="container-xl my-5 bg-dark text-white align-content-center text-center justify-content-center rounded-1" data-th-each="h: ${highlights}">
+        <p class="lead"><u> <code class="text-white" th:text="${h.title}"></code> </u></p>
+        <p> <iframe th:src="${h.matchviewUrl}" class="rounded-1" height="800px" width="800px" allowfullscreen></iframe> </p>
     </div>
 </body>
 
