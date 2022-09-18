@@ -83,23 +83,17 @@ public class TwitterService {
 			JsonArray data = j.getJsonArray("data");
 			JsonObject firstObj = data.getJsonObject(0); // this will test the first tweet
 			JsonObject metrics = firstObj.getJsonObject("public_metrics");
-			
-			
-			
-			
+
 			System.out.println("Total number of tweets: " + data.size()); // object count
 			System.out.println("-----------------------------------------------------------");
 			System.out.println("Tweet Metrics: " + metrics); // object
 			System.out.println("-----------------------------------------------------------");
-			
 
 			for (JsonValue v : j.getJsonArray("data")) {
 
 				tweets.add(Twitter.create((JsonObject) v));
 
 			}
-
-
 		}
 
 		twitterRepo.save(tweets); // enter the tweet id to view it on redis cli

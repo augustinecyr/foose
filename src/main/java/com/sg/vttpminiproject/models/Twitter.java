@@ -12,6 +12,9 @@ public class Twitter {
 	private String text;
 	private String created_at;
 
+
+	
+
 	public String getId() {
 		return id;
 	}
@@ -58,5 +61,6 @@ public class Twitter {
 				.add("created_at", this.created_at)
 				.build();
 	}
+
 
 }
