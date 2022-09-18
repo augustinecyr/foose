@@ -38,3 +38,8 @@
 2. Changing Statistics to Highlights.
 3. Scorebat.com will be used to display latest highlights.
 4. iframe working on the page.
+
+### Week 5 to Week 6 - 12 Sept to 23 Sept 2022
+1. Removed ScoreBat Function due to lag issue.
+2. Updated league table language to English.
+3. Will start implementing User function.
