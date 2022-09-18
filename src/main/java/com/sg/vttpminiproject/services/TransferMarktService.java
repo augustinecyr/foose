@@ -29,6 +29,7 @@ public class TransferMarktService {
 	private static final String URL = "https://transfermarket.p.rapidapi.com/competitions/get-table";
 	// https://transfermarket.p.rapidapi.com/competitions/get-table?id=GB1&seasonID=2022
 	// // example for EPL table.
+	// added domain = "com" for english language due to API update
 
 	@Value("${X-RapidAPI-Key}")
 	private String rapidAPI;
@@ -47,6 +48,7 @@ public class TransferMarktService {
 					.fromUriString(URL)
 					.queryParam("id", id)
 					.queryParam("seasonID", seasonID)
+					.queryParam("domain", "com")
 					.encode()
 					.toUriString();
 
