@@ -39,11 +39,15 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
+                        <a class="nav-link" th:href="@{/register}">
+                            <button class="btn btn-dark" type="submit">Register</button></a>
+                    </li>
+                    <li class="nav-item">
                         <a class="nav-link" th:href="@{/about}">
                             <button class="btn btn-dark" type="submit">About Us</button></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">
+                        <a class="nav-item" href="#">
                             <form method="GET" action="/twitter">
                                 <button class="btn btn-dark" type="submit">Latest from FabrizioRomano</button>
                         </a>
@@ -54,7 +58,7 @@
                             <button class="btn btn-dark" type="submit">League Tables</button></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" th:href="@{/contactus}">
+                        <a class="nav-item" th:href="@{/contactus}">
                             <button class="btn btn-dark" type="submit">Contact Us</button></a>
                     </li>
                 </ul>
