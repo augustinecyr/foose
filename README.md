@@ -43,3 +43,10 @@
 1. Removed ScoreBat Function due to lag issue.
 2. Updated league table language to English.
 3. Will start implementing User function.
+4. Added /register & /contactus
+
+### Week 7 - 26 Sept 2022 to 30 Sept 2022
+1. 
+2. 
+3. 
+4. 
