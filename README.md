@@ -46,7 +46,9 @@
 4. Added /register & /contactus
 
 ### Week 7 - 26 Sept 2022 to 30 Sept 2022
-1. 
-2. 
-3. 
-4. 
+1. Started exploring OAuth method for user login.
+2. Added new dependencies such as spring-security & spring-security-oauth2.
+3. Learned more about Gradle whilst exploring.
+4. Convert gradle build & yml file to maven.
+5. Test OAuth function on localhost & deploy on heroku.
+6. Started to remap the application and remove redundant mappings.
