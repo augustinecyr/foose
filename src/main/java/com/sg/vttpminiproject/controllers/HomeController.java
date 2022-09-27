@@ -40,11 +40,6 @@ public class HomeController {
 		return "contactus";
 	}
 
-    @GetMapping("/register")
-    public String register(){
-        return "register";
-    }
-
 	@GetMapping("/loginpage")
     public String login(){
         return "loginpage";

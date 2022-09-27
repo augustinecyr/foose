@@ -27,5 +27,4 @@ public class SecurityConfiguration  {
     public WebSecurityCustomizer webSecurityCustomizer() {
         return (web) -> web.ignoring().antMatchers("/images/**", "/js/**", "/webjars/**");
     }
- 
 }
