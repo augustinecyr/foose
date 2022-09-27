@@ -15,7 +15,7 @@ public class SecurityConfiguration  {
 
         http.antMatcher("/**")
                 .authorizeRequests()
-                .antMatchers("/", "/login**" , "/about" , "/contactus", "/register")
+                .antMatchers("/", "/loginpage" , "/about" , "/contactus", "/register")
                 .permitAll()
                 .anyRequest()
                 .authenticated()

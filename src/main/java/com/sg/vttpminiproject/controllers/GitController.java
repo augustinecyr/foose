@@ -25,16 +25,6 @@ public class GitController {
         return "securedpage";
     }
 
-    @RequestMapping("/securedloginhome")
-    public String securedSession(Model model,
-                              @RegisteredOAuth2AuthorizedClient OAuth2AuthorizedClient authorizedClient,
-                              @AuthenticationPrincipal OAuth2User oauth2User) {
-        model.addAttribute("userName", oauth2User.getName());
-        model.addAttribute("clientName", authorizedClient.getClientRegistration().getClientName());
-        model.addAttribute("userAttributes", oauth2User.getAttributes());
-        return "index";
-    }
-
     @RequestMapping("/")
     public String index(Model model, Principal principal) {
         return "index";
