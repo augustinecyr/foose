@@ -27,7 +27,7 @@ public class HomeController {
     @GetMapping("/contactus")
 	public String contactUs() {
 		
-		return "contact";
+		return "contactus";
 	}
 
     @GetMapping("/register")
@@ -35,10 +35,10 @@ public class HomeController {
         return "register";
     }
 
-	@GetMapping("/login")
+	@GetMapping("/loginpage")
     public String login(){
-        return "login";
+        return "loginpage";
     }
 	
-
+	
 }

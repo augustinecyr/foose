@@ -40,7 +40,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" th:href="@{/login}">
+                        <a class="nav-link" th:href="@{/loginpage}">
                             <button class="btn btn-dark" type="submit">Login</button></a>
                     </li>
                     <li class="nav-item">
@@ -69,66 +69,55 @@
     <section class="vh-100" style="background-color: #202122;">
         <br>
         <form method="POST" action="/registeruser">
-        <div class="container h-75">
-            <div class="row d-flex justify-content-center align-items-center h-100">
-                <div class="col-xl-9">
-                    <h3 class="display-6 text-white">Create an account</h3>
-                    <br>
-                    <div class="card" style="border-radius: 15px;">
-                        <div class="card-body">
-                            <div class="row align-items-center pt-4 pb-3">
-                                <div class="col-md-3 ps-5">
-                                    <h6 class="mb-0">First Name</h6>
+            <div class="container h-75">
+                
+                <div class="row d-flex justify-content-center align-items-center h-100">
+                    <div class="col-xl-9">
+                        <h3 class="display-6 text-white">Create an account</h3>
+                        <br>
+                        <div class="card" style="border-radius: 15px;">
+                            <div class="card-body">
+                                <hr class="mx-n3">
+                                <div class="row align-items-center py-3">
+                                    <div class="col-md-3 ps-5">
+                                        <h6 class="mb-0">Email address</h6>
+                                    </div>
+                                    <div class="col-md-9 pe-5">
+                                        <input type="email" class="form-control form-control-lg" id="email"
+                                            placeholder="example@example.com" required />
+                                    </div>
                                 </div>
-                                <div class="col-md-9 pe-5">
-                                    <input type="text" class="form-control form-control-lg"  id="firstName" required />
+                                <hr class="mx-n3">
+                                <div class="row align-items-center py-3">
+                                    <div class="col-md-3 ps-5">
+                                        <h6 class="mb-0">Username</h6>
+                                    </div>
+                                    <div class="col-md-9 pe-5">
+                                        <input type="text" class="form-control form-control-lg" id="username"
+                                            required />
+                                    </div>
                                 </div>
+                                <hr class="mx-n3">
+                                <div class="row align-items-center pt-4 pb-3">
+                                    <div class="col-md-3 ps-5">
+                                        <h6 class="mb-0">Password</h6>
+                                    </div>
+                                    <div class="col-md-9 pe-5">
+                                        <input type="password" class="form-control form-control-lg" id="password"
+                                            required />
+                                    </div>
+                                </div>
+                                <hr class="mx-n3">
+                                <button type="submit" class="btn btn-dark"
+                                    style="padding-left: 10px; margin-left: 450px;">Register</button>
                             </div>
-                            
-                            <hr class="mx-n3">
-                            <div class="row align-items-center pt-4 pb-3">
-                                <div class="col-md-3 ps-5">
-                                    <h6 class="mb-0">Last Name</h6>
-                                </div>
-                                <div class="col-md-9 pe-5">
-                                    <input type="text" class="form-control form-control-lg" id="lastName" required />
-                                </div>
-                            </div>
-                            <hr class="mx-n3">
-                            <div class="row align-items-center py-3">
-                                <div class="col-md-3 ps-5">
-                                    <h6 class="mb-0">Email address</h6>
-                                </div>
-                                <div class="col-md-9 pe-5">
-                                    <input type="email" class="form-control form-control-lg" id="email" placeholder="example@example.com" required/>
-                                </div>
-                            </div>
-                            <hr class="mx-n3">
-                            <div class="row align-items-center py-3">
-                                <div class="col-md-3 ps-5">
-                                    <h6 class="mb-0">Username</h6>
-                                </div>
-                                <div class="col-md-9 pe-5">
-                                    <input type="text" class="form-control form-control-lg" id="username" required />
-                                </div>
-                            </div>
-                            <hr class="mx-n3">
-                            <div class="row align-items-center pt-4 pb-3">
-                                <div class="col-md-3 ps-5">
-                                    <h6 class="mb-0">Password</h6>
-                                </div>
-                                <div class="col-md-9 pe-5">
-                                    <input type="password" class="form-control form-control-lg" id="password" required />
-                                </div>
-                            </div>
-                            <hr class="mx-n3">
-                                <button type="submit" class="btn btn-dark" style="padding-left: 10px; margin-left: 450px;">Register</button>
                         </div>
                     </div>
                 </div>
+            </form>
             </div>
-        </form>
-        </div>
+        
+        
     </section>
     <!-- Footer -->
     <footer class="bg-dark text-center text-white fixed-bottom">

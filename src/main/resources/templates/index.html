@@ -29,7 +29,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-dark bg-dark">
         <div class="container-fluid">
-            <a class="navbar-brand">Welcome</a>
+            <a class="navbar-brand text-white">Welcome <span th:text="${userName}"></span></a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                 data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
                 aria-label="Toggle navigation">
@@ -38,7 +38,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" th:href="@{/login}">
+                        <a class="nav-link" th:href="@{/loginpage}">
                             <button class="btn btn-dark" type="submit">Login</button></a>
                     </li>
                     <li class="nav-item">
