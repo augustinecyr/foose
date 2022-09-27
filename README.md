@@ -52,3 +52,5 @@
 4. Convert gradle build & yml file to maven.
 5. Test OAuth function on localhost & deploy on heroku.
 6. Started to remap the application and remove redundant mappings.
+7. Start to design a page to display info about active session.
+8. Start on Contact Us function.
