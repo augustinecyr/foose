@@ -15,14 +15,14 @@ import java.security.Principal;
 @Controller
 public class GitController {
 
-    @RequestMapping("/securedpage")
+    @RequestMapping("/account")
     public String securedPage(Model model,
                               @RegisteredOAuth2AuthorizedClient OAuth2AuthorizedClient authorizedClient,
                               @AuthenticationPrincipal OAuth2User oauth2User) {
         model.addAttribute("userName", oauth2User.getName());
         model.addAttribute("clientName", authorizedClient.getClientRegistration().getClientName());
         model.addAttribute("userAttributes", oauth2User.getAttributes());
-        return "securedpage";
+        return "account";
     }
 
     @RequestMapping("/")
