@@ -28,7 +28,7 @@
   </nav>
   <br>
 
-  <div class="container-xxl justify-content-center rounded-4">
+  <div class="table-responsive justify-content-center rounded-4">
     <table class="table table-dark table-striped rounded-4">
       <thead>
         <tr>
@@ -47,7 +47,7 @@
       </thead>
       <tbody>
         <tr th:each="table: ${tables}">
-          <th th:text="${table.rank}"></th>
+          <th th:text="${table.rank}" style="text-align: center;"></th>
           <td><img th:src="${table.clubImage}">
           <td th:text="${table.clubName}"></td>
           </td>
