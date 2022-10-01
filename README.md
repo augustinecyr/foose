@@ -1,6 +1,6 @@
 ### Mini Project
 
-### Week 1 / 15-19 August 2022
+### Week 1 - 15-19 August 2022
 1. Setting up project files and folders
 2. Add all standard dependencies and required properties e.g Redis & Heroku on VS.
 3. Set remote connections to GitHub and Heroku.
@@ -12,7 +12,7 @@
 9. Testing if redis is working and storing payload.
 10. Manage to successfully display & navigate to twitter.html.
 
-### Week 2 / 22-26 August 2022
+### Week 2 - 22-26 August 2022
 1. UI design of twitter.html.
 2. Added buttons to link different social media platforms e.g. Twitter,Youtube with the usage of Bootstrap 5 Icons.
 3. Utilised navbar to make browsing easier to understand.
@@ -22,7 +22,7 @@
 7. Start building for TransferMarkt components.
 8. Created about.html & contact.html.
 
-### Week 3 / 29 August to 2 Sept 2022
+### Week 3 - 29 August to 2 Sept 2022
 1. Reading JSON payload from the TransferMarkt API endpoint.
 2. Query parameters working.
 3. Select dropdown menu values working for selection of leagues.
@@ -33,13 +33,13 @@
 8. Solved mobile view, trfRepo doesnt work on heroku due to H12 error.
 9. Commented out trfRepo, function works as it should on localhost.
 
-### Week 4 / 5 Sept to 9 Sept 2022
+### Week 4 - 5 Sept to 9 Sept 2022
 1. Start planning for @RestController and POST method.
 2. Changing Statistics to Highlights.
 3. Scorebat.com will be used to display latest highlights.
 4. iframe working on the page.
 
-### Week 5 to Week 6 - 12 Sept to 23 Sept 2022
+### Week 5 - Week 6 - 12 Sept to 23 Sept 2022
 1. Removed ScoreBat Function due to lag issue.
 2. Updated league table language to English.
 3. Will start implementing User function.
@@ -54,3 +54,6 @@
 6. Started to remap the application and remove redundant mappings.
 7. Start to design a page to display info about active session.
 8. Start on Contact Us function.
+
+### Week 8 - 3 Oct 2022 to 10 Oct 2022 FINAL WEEK
+1. ContactController & Implementation of POST & RESTController.
