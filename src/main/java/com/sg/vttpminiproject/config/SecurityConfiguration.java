@@ -15,7 +15,7 @@ public class SecurityConfiguration  {
 
         http.antMatcher("/**")
                 .authorizeRequests()
-                .antMatchers("/", "/loginpage" , "/about" , "/contactus", "/register", "/submitform")
+                .antMatchers("/", "/loginpage" , "/about" , "/contactus" ,"/formoutput" , "/simpleform")
                 .permitAll()
                 .anyRequest()
                 .authenticated()

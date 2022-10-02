@@ -67,8 +67,8 @@
         </div>
     </nav>
     <section class="vh-100" style="background-color: #202122;">
+        <form method="POST" action="/submitform">
         <div class="container h-75">
-            <form method="POST" action="/submitform">
             <div class="row d-flex justify-content-center align-items-center h-100">
                 <div class="col-xl-9">
                     <h1 class="display-6 text-white">Collaborate with us.</h1>
@@ -80,7 +80,7 @@
                                     <h6 class="mb-0">Name</h6>
                                 </div>
                                 <div class="col-md-9 pe-5">
-                                    <input type="text" class="form-control form-control-lg" required />
+                                    <input type="text" class="form-control form-control-lg" name="name" required />
                                 </div>
                             </div>
                             <hr class="mx-n3">
@@ -90,12 +90,12 @@
                                 </div>
                                 <div class="col-md-9 pe-5">
                                     <input type="email" class="form-control form-control-lg"
-                                        placeholder="example@example.com" required />
+                                        placeholder="example@example.com" name="email" required />
                                 </div>
                             </div>
                             <hr class="mx-n3">
                             <div class="form-outline mb-4">
-                                <textarea class="form-control" rows="4" placeholder="Message"></textarea>
+                                <textarea class="form-control" rows="4" placeholder="Message" name="message"></textarea>
                             </div>
                             <hr class="mx-n3">
                             <div class="px-5 py-4">
@@ -105,8 +105,8 @@
                     </div>
                 </div>
             </div>
-        </form>
         </div>
+    </form>
     </section>
 </body>
 <!-- Footer -->
