@@ -82,7 +82,8 @@
                   <h5 class="mb-1">Session Details</h5>
                   <p class="mb-2 pb-1" style="color: #2b2a2a;">Account ID:<span th:text="${userName}"></span></p>
                   <div>OAuth Client: <span th:text="${clientName}"></span></div>
-                  <div>User Attributes: <span th:text="${userAttributes}"></span></div>
+                  <!-- Displays what GitHub Auth will return as an JsonObject -->
+                  <!-- <div>User Attributes: <span th:text="${userAttributes}"></span></div> -->
                 </div>
               </div>
             </div>
@@ -92,9 +93,7 @@
     </div>
     </div>
   </section>
-
 </body>
-
 <!-- Footer -->
 <footer class="bg-dark text-center text-white fixed-bottom">
   <div class="text-center p-3 fixed-bottom bg-dark text-white">
