@@ -34,17 +34,26 @@ public class ContactController {
 
 
     @GetMapping(value = "/submitform")
-    public String showAddEntryPage(Model model) {
-        ContactForm cForm = new ContactForm();
-        model.addAttribute("contactform", cForm);
+    public String entry(Model model) {
+        entry = conSvc.getEntries();
+        model.addAttribute("persons", entry);
 
         return "submitform";
     }
 
+
+    @GetMapping(value = "/addEntry")
+    public String showAddEntryPage(Model model) {
+        ContactForm cForm = new ContactForm();
+        model.addAttribute("contactForm", cForm);
+
+        return "addEntry";
+    }
+
  
-    @PostMapping(value = "/submitform")
+    @PostMapping(value = "/addEntry")
     public String savePerson(Model model,
-            @ModelAttribute("contactform") ContactForm contactForm) {
+            @ModelAttribute("contactForm") ContactForm contactForm) {
 
         String email = contactForm.getEmail();
         String name = contactForm.getName();
@@ -54,11 +63,11 @@ public class ContactController {
             Contact newEntry = new Contact(email, name);
             conSvc.addEntry(newEntry);
 
-            return "redirect:/contactus";
+            return "redirect:/submitform";
         }
 
        
-        return "submitform";
+        return "addEntry";
     }
 
 
