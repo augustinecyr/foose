@@ -27,21 +27,4 @@ public class Contact {
         this.name = name;
     }
 
-
-    public Contact(String email, String name, String message) {
-        this.email = email;
-        this.name = name;
-        this.message = name;
-    }
-
-    public Contact(String name, String message) {
-    
-        this.name = name;
-        this.message = message;
-    }
-
-    
-
-    
-    
 }
