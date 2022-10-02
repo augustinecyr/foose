@@ -73,8 +73,19 @@
                 <div class="flex-grow-1 ms-3">
                   <h5 class="mb-1 text-center">Session Details</h5>
                   <br>
-                  <p class="mb-2 pb-1" style="color: #2b2a2a;">Account ID:<span th:text="${userName}"></span></p>
+                  <p class="mb-2 pb-1" style="color: #2b2a2a;">Account ID: <span th:text="${userName}"></span></p>
                   <div>OAuth Client: <span th:text="${clientName}"></span></div>
+                  <!-- Current Date and Time -->
+                  Get Current Date and Time Both:
+                  <input type="text" id="currentDateTime">
+                  <br><br>
+                  <script>
+                    var today = new Date();
+                    var date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+                    var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+                    var dateTime = date + ' ' + time;
+                    document.getElementById("currentDateTime").value = dateTime;
+                  </script>
                   <!-- Displays what GitHub Auth will return as an JsonObject -->
                   <!-- <div>User Attributes: <span th:text="${userAttributes}"></span></div> -->
                 </div>
