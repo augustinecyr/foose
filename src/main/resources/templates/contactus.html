@@ -67,7 +67,7 @@
         </div>
     </nav>
     <section class="vh-100" style="background-color: #202122;">
-        <form method="POST" action="/submitform">
+        <form action="@{/submitform}" th:object="${contactform}" method="POST">
         <div class="container h-75">
             <div class="row d-flex justify-content-center align-items-center h-100">
                 <div class="col-xl-9">
@@ -80,7 +80,7 @@
                                     <h6 class="mb-0">Name</h6>
                                 </div>
                                 <div class="col-md-9 pe-5">
-                                    <input type="text" class="form-control form-control-lg" name="name" required />
+                                    <input type="text" th:field="*{name}" class="form-control form-control-lg" name="name"  required />
                                 </div>
                             </div>
                             <hr class="mx-n3">
@@ -89,13 +89,13 @@
                                     <h6 class="mb-0">Email address</h6>
                                 </div>
                                 <div class="col-md-9 pe-5">
-                                    <input type="email" class="form-control form-control-lg"
+                                    <input type="email" th:field="*{email}" class="form-control form-control-lg"
                                         placeholder="example@example.com" name="email" required />
                                 </div>
                             </div>
                             <hr class="mx-n3">
                             <div class="form-outline mb-4">
-                                <textarea class="form-control" rows="4" placeholder="Message" name="message"></textarea>
+                                <textarea th:field="*{message}" class="form-control" rows="4" placeholder="Message" name="message"></textarea>
                             </div>
                             <hr class="mx-n3">
                             <div class="px-5 py-4">
