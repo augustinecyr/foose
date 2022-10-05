@@ -3,7 +3,7 @@ package com.sg.vttpminiproject.controllers;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
+// import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -23,7 +23,8 @@ public class ContactRestController {
 
         Optional<Contact> existingEntry = conRepo.get(email);
 
-        return ResponseEntity.ok().contentType(MediaType.APPLICATION_JSON).body(existingEntry.toString());
+      //  return ResponseEntity.ok().contentType(MediaType.APPLICATION_JSON).body(existingEntry.toString());
+        return ResponseEntity.ok(existingEntry.toString());
     }
 
 }

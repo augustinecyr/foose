@@ -19,7 +19,9 @@ public class ContactController {
 
         // to test if <entry> gets into the Model & can be seen in terminal
         System.out.println(entry.getName());
+        System.out.println("-------------------------");
         System.out.println(entry.getEmail());
+        System.out.println("-------------------------");
         System.out.println(entry.getMessage());
 
         conRepo.save(entry);
