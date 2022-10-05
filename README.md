@@ -57,3 +57,6 @@
 
 ### Week 8 - 3 Oct 2022 to 10 Oct 2022 FINAL WEEK
 1. ContactController & Implementation of POST & RESTController.
+2. Creating a form and storing the input in Redis.
+3. Use PathVariable using email to get JSON response.
+4. Finalise the navigation and design of all templates.
