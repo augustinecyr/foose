@@ -31,7 +31,7 @@ public class TransferMarktService {
 	// // example for EPL table.
 	// added domain = "com" for english language due to API update
 
-	@Value("${X-RapidAPI-Key}")
+	@Value("${X_RapidAPI_Key}")
 	private String rapidAPI;
 
 	// @Autowired
