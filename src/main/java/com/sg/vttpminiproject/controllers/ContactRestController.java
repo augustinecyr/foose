@@ -21,7 +21,7 @@ public class ContactRestController {
     @GetMapping(path = "/contactrest/{email}", produces = "application/json")
     public ResponseEntity<String> getMsg(@PathVariable String email) {
 
-        Optional <Contact> existingEntry = conRepo.get(email);
+        Optional<Contact> existingEntry = conRepo.get(email);
 
         return ResponseEntity.ok().contentType(MediaType.APPLICATION_JSON).body(existingEntry.toString());
     }
