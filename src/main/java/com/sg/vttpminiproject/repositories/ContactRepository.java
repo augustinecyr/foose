@@ -1,9 +1,7 @@
 package com.sg.vttpminiproject.repositories;
 
 import java.time.Duration;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -19,19 +17,17 @@ public class ContactRepository {
     @Qualifier("redislab")
     private RedisTemplate<String, String> redisTemplate;
 
-    public void save(Contact contact) {
-        redisTemplate.opsForValue().set(contact.getEmail(), contact.toString());
-        redisTemplate.expire(contact.getEmail(), Duration.ofMinutes(5));
+    public void save(Contact entry) {
+        redisTemplate.opsForValue().set(entry.getEmail(), entry.toJson().toString());
+        redisTemplate.expire(entry.getEmail(), Duration.ofHours(10));
     }
 
-    public void save(List<Contact> contacts) {
-        Map<String, String> map = new HashMap<>();
-        for (Contact c : contacts)
-            map.put(c.getEmail(), c.toString());
-        redisTemplate.opsForValue().multiSet(map);
+    public Optional<Contact> get(String email) {
+		if (!redisTemplate.hasKey(email))
+			return Optional.empty();
+		String data = redisTemplate.opsForValue().get(email);
+		return Optional.of(Contact.create(data));
+	}
 
-        for (String email : map.keySet())
-            redisTemplate.expire(email, Duration.ofMinutes(5));
-    }
 
 }

@@ -34,6 +34,7 @@ public class HomeController {
 
 	@GetMapping("/contactus")
 	public String contactUs() {
+
 		return "contactus";
 	}
 
