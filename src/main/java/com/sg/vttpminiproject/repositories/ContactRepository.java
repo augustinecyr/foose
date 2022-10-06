@@ -1,7 +1,6 @@
 package com.sg.vttpminiproject.repositories;
 
 import java.time.Duration;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -22,12 +21,12 @@ public class ContactRepository {
         redisTemplate.expire(entry.getEmail(), Duration.ofHours(10));
     }
 
-    public Optional<Contact> get(String email) {
-		if (!redisTemplate.hasKey(email))
-			return Optional.empty();
-		String data = redisTemplate.opsForValue().get(email);
-		return Optional.of(Contact.create(data));
-	}
-
+    public String get(String email) {
+        if (!redisTemplate.hasKey(email))
+            return "";
+        String data = redisTemplate.opsForValue().get(email);
+        System.out.println(data);
+        return data;
+    }
 
 }
