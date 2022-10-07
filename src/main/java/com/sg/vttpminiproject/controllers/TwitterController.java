@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 
-
 import com.sg.vttpminiproject.models.Twitter;
 import com.sg.vttpminiproject.services.TwitterService;
 
@@ -28,7 +27,7 @@ public class TwitterController {
         List<Twitter> tweets = twitterSvc.getTweets();
         sess.setAttribute("tweets", tweets);
         model.addAttribute("tweets", tweets);
-        
+
         return "twitter";
 
     }

@@ -10,12 +10,12 @@ import com.sg.vttpminiproject.repositories.ContactRepository;
 
 @Controller
 public class ContactController {
-    
+
     @Autowired
     private ContactRepository conRepo;
 
     @PostMapping("/success")
-	public String contact(@ModelAttribute Contact entry  ) {
+    public String contact(@ModelAttribute Contact entry) {
 
         // to test if <entry> gets into the Model & can be seen in terminal
         System.out.println(entry.getName());
@@ -26,9 +26,7 @@ public class ContactController {
 
         conRepo.save(entry);
 
-		return "success";
-	}
-
-    
+        return "success";
+    }
 
 }

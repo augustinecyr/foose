@@ -104,7 +104,8 @@ public class TransferMarktService {
 			}
 
 		}
-
+		// Disable this function due to Heroku timing out on the GET request when saving
+		// payload into redis, function works in localhost.
 		// trfRepo.save(tables);
 
 		return tables;

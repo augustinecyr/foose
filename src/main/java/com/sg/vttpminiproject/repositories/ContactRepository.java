@@ -20,7 +20,7 @@ public class ContactRepository {
         redisTemplate.opsForValue().set(entry.getEmail(), entry.toJson().toString());
         redisTemplate.expire(entry.getEmail(), Duration.ofHours(10));
     }
-
+    // retrieves email from redis by calling get
     public String get(String email) {
         if (!redisTemplate.hasKey(email))
             return "";

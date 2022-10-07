@@ -10,7 +10,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 
 @Controller
 public class HomeController {
-
+	// Controller for navigation around the application
+	// Only displayed userName for pages that required authentication
 	@GetMapping("/home")
 	public String home(Model model,
 			@RegisteredOAuth2AuthorizedClient OAuth2AuthorizedClient authorizedClient,

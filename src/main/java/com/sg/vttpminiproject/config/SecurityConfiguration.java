@@ -15,11 +15,13 @@ public class SecurityConfiguration  {
 
         http.antMatcher("/**")
                 .authorizeRequests()
+                // specifies the paths that is allowed for access before login in with GitHub account
                 .antMatchers("/", "/loginpage" , "/about" , "/contactus", "/success")
                 .permitAll()
                 .anyRequest()
                 .authenticated()
                 .and()
+                // the path for login
                 .oauth2Login().loginPage("/loginpage");
         return http.build();
     }

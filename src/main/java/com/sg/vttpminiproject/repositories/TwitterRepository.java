@@ -15,12 +15,10 @@ import com.sg.vttpminiproject.models.Twitter;
 
 @Repository
 public class TwitterRepository {
-    @Autowired
+	@Autowired
 	// always rmb to set REDIS_PASSWORD on cli
-    @Qualifier("redislab")
+	@Qualifier("redislab")
 	private RedisTemplate<String, String> redisTemplate;
-
-	
 
 	public void save(Twitter tweet) {
 		redisTemplate.opsForValue().set(tweet.getId(), tweet.toJson().toString());
@@ -29,11 +27,11 @@ public class TwitterRepository {
 
 	public void save(List<Twitter> tweets) {
 		Map<String, String> map = new HashMap<>();
-		for (Twitter twt: tweets)
+		for (Twitter twt : tweets)
 			map.put(twt.getId(), twt.toJson().toString());
 		redisTemplate.opsForValue().multiSet(map);
 
-		for (String id: map.keySet())
+		for (String id : map.keySet())
 			redisTemplate.expire(id, Duration.ofMinutes(5));
 	}
 

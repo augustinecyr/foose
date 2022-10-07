@@ -24,8 +24,8 @@ public class ContactRestController {
     @GetMapping(path = "/contactrest/{email}", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<String> getMsg(@PathVariable String email) {
 
+        // get existing email from ContactRepository
         String opt = conRepo.get(email);
-        System.out.println();
 
         return ResponseEntity.ok(opt);
 

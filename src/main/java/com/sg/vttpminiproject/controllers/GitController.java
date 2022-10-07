@@ -8,17 +8,15 @@ import org.springframework.security.oauth2.client.OAuth2AuthorizedClient;
 import org.springframework.security.oauth2.client.annotation.RegisteredOAuth2AuthorizedClient;
 import org.springframework.security.oauth2.core.user.OAuth2User;
 
-
-
 import java.security.Principal;
 
 @Controller
 public class GitController {
-
+    // displays the selected account attributes received from GitHub's endpoint after OAuth
     @RequestMapping("/account")
     public String securedPage(Model model,
-                              @RegisteredOAuth2AuthorizedClient OAuth2AuthorizedClient authorizedClient,
-                              @AuthenticationPrincipal OAuth2User oauth2User) {
+            @RegisteredOAuth2AuthorizedClient OAuth2AuthorizedClient authorizedClient,
+            @AuthenticationPrincipal OAuth2User oauth2User) {
         model.addAttribute("userName", oauth2User.getName());
         model.addAttribute("clientName", authorizedClient.getClientRegistration().getClientName());
         model.addAttribute("userAttributes", oauth2User.getAttributes());
