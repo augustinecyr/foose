@@ -60,3 +60,5 @@
 2. Creating a form and storing the input in Redis.
 3. Use PathVariable using email to get JSON response.
 4. Finalise the navigation and design of all templates.
+5. Contact form is completed.
+6. Start commenting on code & finalise the designs.
