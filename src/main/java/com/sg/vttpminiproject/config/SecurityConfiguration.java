@@ -16,7 +16,7 @@ public class SecurityConfiguration  {
         http.antMatcher("/**")
                 .authorizeRequests()
                 // specifies the paths that is allowed for access before login in with GitHub account
-                .antMatchers("/", "/loginpage" , "/about" , "/contactus", "/success")
+                .antMatchers("/", "/loginpage" , "/about" , "/contactus", "/success" , "/gallery")
                 .permitAll()
                 .anyRequest()
                 .authenticated()

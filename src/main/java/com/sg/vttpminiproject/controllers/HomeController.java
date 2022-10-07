@@ -44,4 +44,9 @@ public class HomeController {
 		return "loginpage";
 	}
 
+	@GetMapping("/gallery")
+	public String gallery() {
+		return "gallery";
+	}
+
 }

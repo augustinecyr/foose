@@ -62,3 +62,4 @@
 4. Finalise the navigation and design of all templates.
 5. Contact form is completed.
 6. Start commenting on code & finalise the designs.
+7. Added /gallery and images from premierleague.com gallery.
