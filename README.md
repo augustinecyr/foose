@@ -1,5 +1,8 @@
-### Mini Project
+### Foose - Football Application
+# Backend - Spring + Java
+# Frontend - HTML + Thymeleaf + Bootstrap
 
+### Workflow
 ### Week 1 - 15-19 August 2022
 1. Setting up project files and folders
 2. Add all standard dependencies and required properties e.g Redis & Heroku on VS.
