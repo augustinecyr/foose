@@ -8,9 +8,9 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.sg</groupId>
-	<artifactId>vttpminiproject</artifactId>
+	<artifactId>foose</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>vttpminiproject</name>
+	<name>foose</name>
 	<description>Mini Project for VTTP</description>
 	<properties>
 		<java.version>18</java.version>
